@@ -19,6 +19,10 @@ import Data.Monoid (class Monoid, mempty)
 -- | type class instances.
 -- |
 -- | `Lazy` values can be evaluated by using the `force` function.
+-- |
+-- | purerl note: Due to the nature of the BEAM platform Lazy values
+-- | are not in fact lazy with the Erlang backend, but simple thunks, i.e.
+-- | will be recomputed each time they are required.
 foreign import data Lazy :: * -> *
 
 -- | Defer a computation, creating a `Lazy` value.
