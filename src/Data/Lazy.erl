@@ -4,4 +4,4 @@
 % Note that this is not in fact lazy, but a simple thunk.
 
 defer(F) -> F.
-force(F) -> F().
+force(F) -> F(unit).
